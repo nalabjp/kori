@@ -1,0 +1,11 @@
+test:
+  a: 1
+  'b': 'test_xxx'
+  c:
+    - d: 'test_yyy'
+    -
+      - 2
+      - '3'
+  e:
+    f:
+      g: 'test_zzz'
