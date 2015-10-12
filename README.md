@@ -1,39 +1,42 @@
 # Kori
 
 Kori generate deep frozen objects from yaml or hash.
+It using a [ice_nine](https://github.com/dkubb/ice_nine), inspired by [Settingslogic](https://github.com/settingslogic/settingslogic).
+
+Kori(kōri) means Ice in japanese.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'kori'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install kori
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'kori'
 
-## Development
+    # From Hash
+    config = Kori.create({a: 1, b: { c: 'abc' } })
+    config.a                # 1
+    config[:a]              # 1
+    config['a']             # 1
+    config.b                # { c: 'abc' }
+    config.b.class          # Kori
+    config.b.c              # 'abc'
+    config.forzen?          # true
+    config.a.frozen?        # true
+    config.b.frozen?        # true
+    config.b.c.frozen?      # true
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+    # From YAML
+    config = Kori.create('app_config.yml')          # load from ./app_config.yml
+    config = Kori.create('/path/to/app_config.yml') # load from /path/to/app_config.yml
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/kori.
-
+    # If you are using Rails, it is possible to use as `Rails.application.config_for`
+    config = Kori.create(:app_config)               # load from /rails_root/config/app_config.yml
+    config = Kori.create('subdir/app_config')       # load from /rails_root/config/subdir/app_config.yml
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+MIT License
+
+see [LICENSE.txt](https://github.com/nalabjp/kori/blob/master/LICENSE.txt).
 
