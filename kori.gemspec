@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['nalabjp']
   spec.email         = ['nalabjp@gmail.com']
 
-  spec.summary       = %q{Deep frozen object from yaml or hash.}
-  spec.description   = %q{Deep frozen object from yaml or hash.}
+  spec.summary       = %q{Deep frozen objects from yaml or hash.}
+  spec.description   = %q{Deep frozen objects from yaml or hash.}
   spec.homepage      = 'https://github.com/nalabjp/kori'
   spec.license       = 'MIT'
 

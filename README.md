@@ -14,7 +14,7 @@ Kori(kōri) means Ice in japanese.
     require 'kori'
 
     # From Hash
-    config = Kori.create({a: 1, b: { c: 'abc' } })
+    config = Kori.create({ a: 1, b: { c: 'abc' } })
     config.a                # 1
     config[:a]              # 1
     config['a']             # 1
