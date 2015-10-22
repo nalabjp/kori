@@ -83,7 +83,6 @@ class Kori < Hash
   end
 
   def create_accessor_for(key, val)
-    return unless key.to_s =~ /^\w+\z/
     instance_variable_set("@#{key}", val)
     self.class.class_eval <<-EOCODE, __FILE__, __LINE__ + 1
       def #{key}
