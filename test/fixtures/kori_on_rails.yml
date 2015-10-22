@@ -9,3 +9,4 @@ test:
   e:
     f:
       g: 'test_zzz'
+  日本語: 'Key is no problem even in multi-byte string'

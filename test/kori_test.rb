@@ -98,6 +98,14 @@ class KoriTest < Minitest::Test
     assert_equal 'zzz', KORI1.get('e.f.g')
     assert KORI1.e.f.g.frozen?
     assert KORI1.e.f.g.instance_of?(String)
+
+    assert_equal 'Key is no problem even in multi-byte string', KORI1.日本語
+    assert_equal 'Key is no problem even in multi-byte string', KORI1[:日本語]
+    assert_equal 'Key is no problem even in multi-byte string', KORI1['日本語']
+    assert_equal 'Key is no problem even in multi-byte string', KORI1.fetch('日本語')
+    assert_equal 'Key is no problem even in multi-byte string', KORI1.get('日本語')
+    assert KORI1.日本語.frozen?
+    assert KORI1.日本語.instance_of?(String)
   end
 
   def test_create_from_yaml
@@ -181,6 +189,14 @@ class KoriTest < Minitest::Test
     assert_equal 'zzz', KORI2.get('e.f.g')
     assert KORI2.e.f.g.frozen?
     assert KORI2.e.f.g.instance_of?(String)
+
+    assert_equal 'Key is no problem even in multi-byte string', KORI2.日本語
+    assert_equal 'Key is no problem even in multi-byte string', KORI2[:日本語]
+    assert_equal 'Key is no problem even in multi-byte string', KORI2['日本語']
+    assert_equal 'Key is no problem even in multi-byte string', KORI2.fetch('日本語')
+    assert_equal 'Key is no problem even in multi-byte string', KORI2.get('日本語')
+    assert KORI2.日本語.frozen?
+    assert KORI2.日本語.instance_of?(String)
   end
 
   def test_create_from_yaml_on_rails
@@ -264,5 +280,13 @@ class KoriTest < Minitest::Test
     assert_equal 'test_zzz', KORI3.get('e.f.g')
     assert KORI3.e.f.g.frozen?
     assert KORI3.e.f.g.instance_of?(String)
+
+    assert_equal 'Key is no problem even in multi-byte string', KORI3.日本語
+    assert_equal 'Key is no problem even in multi-byte string', KORI3[:日本語]
+    assert_equal 'Key is no problem even in multi-byte string', KORI3['日本語']
+    assert_equal 'Key is no problem even in multi-byte string', KORI3.fetch('日本語')
+    assert_equal 'Key is no problem even in multi-byte string', KORI3.get('日本語')
+    assert KORI3.日本語.frozen?
+    assert KORI3.日本語.instance_of?(String)
   end
 end

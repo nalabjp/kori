@@ -17,7 +17,8 @@ class KoriCreator
           f: {
             g: 'zzz'
           }
-        }
+        },
+        日本語: 'Key is no problem even in multi-byte string'
       }
       Kori.create(hash)
     end
