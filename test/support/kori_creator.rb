@@ -20,18 +20,18 @@ class KoriCreator
         },
         日本語: 'Key is no problem even in multi-byte string'
       }
-      Kori.create(hash)
+      Kori.freeze(hash)
     end
 
     def from_yaml
-      Kori.create(File.expand_path('../../fixtures/kori.yml', __FILE__))
+      Kori.freeze(File.expand_path('../../fixtures/kori.yml', __FILE__))
     end
 
     def from_yaml_on_rails
       require File.expand_path('../../support/rails_helper.rb', __FILE__)
 
       Kori.stub_any_instance(:rails_config_path, File.expand_path('../../fixtures', __FILE__)) do
-        Kori.create(:kori_on_rails)
+        Kori.freeze(:kori_on_rails)
       end
     ensure
       Object.class_eval { remove_const(:Rails) }

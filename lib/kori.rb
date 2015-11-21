@@ -6,9 +6,10 @@ class Kori < Hash
   private_class_method :new
 
   class << self
-    def create(file_or_hash)
+    def freeze(file_or_hash)
       IceNine.deep_freeze(new(file_or_hash))
     end
+    alias :create :freeze
 
     undef_method :[]
   end

@@ -10,6 +10,7 @@ class KoriTest < Minitest::Test
     assert !Kori.respond_to?(:[])
     assert !Kori.respond_to?(:new)
     assert Kori.respond_to?(:create)
+    assert Kori.respond_to?(:freeze)
   end
 
   def test_failure_of_not_found_key
@@ -17,7 +18,7 @@ class KoriTest < Minitest::Test
     assert_raises(KeyError) { KORI1.fetch('not_found_key') }
   end
 
-  def test_create_from_hash
+  def test_freeze_from_hash
     assert KORI1.frozen?
     assert KORI1.instance_of?(Kori)
 
@@ -108,7 +109,7 @@ class KoriTest < Minitest::Test
     assert KORI1.日本語.instance_of?(String)
   end
 
-  def test_create_from_yaml
+  def test_freeze_from_yaml
     assert KORI2.frozen?
     assert KORI2.instance_of?(Kori)
 
@@ -199,7 +200,7 @@ class KoriTest < Minitest::Test
     assert KORI2.日本語.instance_of?(String)
   end
 
-  def test_create_from_yaml_on_rails
+  def test_freeze_from_yaml_on_rails
     assert KORI3.frozen?
     assert KORI3.instance_of?(Kori)
 
