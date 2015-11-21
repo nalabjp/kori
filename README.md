@@ -19,7 +19,7 @@ Kori(kōri) means Ice in japanese.
     require 'kori'
 
     # From Hash
-    config = Kori.create({ a: 1, b: { c: 'abc' } })
+    config = Kori.freeze({ a: 1, b: { c: 'abc' } })
     config.a                # 1
     config[:a]              # 1
     config['a']             # 1
@@ -32,12 +32,12 @@ Kori(kōri) means Ice in japanese.
     config.b.c.frozen?      # true
 
     # From YAML
-    config = Kori.create('app_config.yml')          # load from ./app_config.yml
-    config = Kori.create('/path/to/app_config.yml') # load from /path/to/app_config.yml
+    config = Kori.freeze('app_config.yml')          # load from ./app_config.yml
+    config = Kori.freeze('/path/to/app_config.yml') # load from /path/to/app_config.yml
 
     # If you are using Rails, it is possible to use as `Rails.application.config_for`
-    config = Kori.create(:app_config)               # load from /rails_root/config/app_config.yml
-    config = Kori.create('subdir/app_config')       # load from /rails_root/config/subdir/app_config.yml
+    config = Kori.freeze(:app_config)               # load from /rails_root/config/app_config.yml
+    config = Kori.freeze('subdir/app_config')       # load from /rails_root/config/subdir/app_config.yml
 
 ## License
 
