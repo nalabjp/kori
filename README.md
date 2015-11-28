@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/nalabjp/kori.svg?branch=master)](https://travis-ci.org/nalabjp/kori)
 [![Code Climate](https://codeclimate.com/repos/5648b1ae1787d73e1f016cf6/badges/5e21bf44e70faa02d88a/gpa.svg)](https://codeclimate.com/repos/5648b1ae1787d73e1f016cf6/feed)
 [![Test Coverage](https://codeclimate.com/repos/5648b1ae1787d73e1f016cf6/badges/5e21bf44e70faa02d88a/coverage.svg)](https://codeclimate.com/repos/5648b1ae1787d73e1f016cf6/coverage)
+[![Dependency Status](https://gemnasium.com/nalabjp/kori.svg)](https://gemnasium.com/nalabjp/kori)
 
 Kori generate deep frozen objects from yaml or hash.
 It using a [ice_nine](https://github.com/dkubb/ice_nine), inspired by [Settingslogic](https://github.com/settingslogic/settingslogic).
