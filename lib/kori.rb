@@ -50,7 +50,7 @@ class Kori < Hash
     when String, Symbol
       replace(load_yaml(file_or_hash))
     else
-      raise "Could not load configuration. No such file - #{file_or_hash}"
+      raise ArgumentError, "Could not load configuration. Invalid type of argument (#{file_or_hash.class.name})."
     end
 
     create_accessors!

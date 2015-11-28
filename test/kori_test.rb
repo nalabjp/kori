@@ -18,6 +18,10 @@ class KoriTest < Minitest::Test
     assert_raises(KeyError) { KORI1.fetch('not_found_key') }
   end
 
+  def test_failure_of_invalid_type_of_argument
+    assert_raises(ArgumentError) { Kori.freeze(['foo', 'bar']) }
+  end
+
   def test_freeze_from_hash
     assert KORI1.frozen?
     assert KORI1.instance_of?(Kori)
