@@ -59,13 +59,8 @@ class Kori < Hash
   def load_yaml(file)
     on_rails = !!defined?(Rails)
 
-    file = if on_rails
-             "#{rails_config_path}/#{file}.yml"
-           elsif file.is_a?(Symbol)
-             file.to_s.concat('.yml')
-           else
-             file
-           end
+    file = "#{rails_config_path}/#{file}.yml" if on_rails
+    file = file.to_s.concat('.yml') if file.is_a?(Symbol)
 
     config = YAML.load(ERB.new(File.read(file)).result)
     config = config[Rails.env] if on_rails
