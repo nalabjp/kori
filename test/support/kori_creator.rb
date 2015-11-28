@@ -30,9 +30,7 @@ class KoriCreator
     def from_yaml_on_rails
       require File.expand_path('../../support/rails_helper.rb', __FILE__)
 
-      Kori.stub_any_instance(:rails_config_path, File.expand_path('../../fixtures', __FILE__)) do
-        Kori.freeze(:kori_on_rails)
-      end
+      Kori.freeze(:kori_on_rails)
     ensure
       Object.class_eval { remove_const(:Rails) }
     end
