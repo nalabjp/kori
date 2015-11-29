@@ -8,4 +8,4 @@ rvm:
 before_install: gem install bundler -v 1.10.6
 addons:
   code_climate:
-    repo_token: c05778589e31826bd230d58f92c598299c96c83805126865525a976c0d4807ce
+    repo_token: 1493b697c37bf12ce8eb899c244454f178bd97f098c7faaba69683c4a303a835
