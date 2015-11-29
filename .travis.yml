@@ -1,11 +1,14 @@
 language: ruby
 rvm:
-  - 2.1.6
-  - 2.2.0
-  - 2.2.1
-  - 2.2.2
-  - 2.2.3
+- 2.1.6
+- 2.2.0
+- 2.2.1
+- 2.2.2
+- 2.2.3
 before_install: gem install bundler -v 1.10.6
 addons:
   code_climate:
     repo_token: 1493b697c37bf12ce8eb899c244454f178bd97f098c7faaba69683c4a303a835
+notifications:
+  slack:
+    secure: a5GBAjzkFa55cIb+aSQRyWkN1EhXIVxa66wfeX/P5EqdI4MIMJX4o3wVCE58QXoHgbFk8vYBGRjmKyIU8d0FtOrl256I/c9vie2oHnxrmaWbJLVGUe2LguZQoQqA0CXPBMgV6W4X4xFO6EyPIFR7I9FG6jygwEmIgUGlu96nzYlaUdD3tHhe6fj2+aHjpQIgnrNcq/i90QRGHJv2XS/3P1M2Xk96Qog7UQQXe4vE1peljULCEy82av7z5SMb1+xRw4tPwz/8sR1QfHyUzw2jeXXdGQBjTIPOqQxSDebqXCkc8fmllDnH2+Cgthy7CiFlFQ1Gq0D+viQIIEq/eBPKPY6/mOAA3IAsvUZWi4I1pTPdqbE/ow7Uv6lpcbOC0LPcU/BNx4V/vKMS0jnroeNeU/unqKD8mGng9YLb5UYTrCi+zotYucmCoZa1pZXCJnyWeQIQuzUvwjUyYAcSqxDaDKZhlanyNui50aPez64pdpM1f563r9XYAZ9eheJ6mbEbvMzelk5u6r9BIykDLfP078DJYpUG883PNY7dmVBfqD6b7TGoqm1AoWxxkm/6K5fZGyfRzaH0QtS5xOBsBwJo8yNOC+H0lfBwK/DSrrIgIc7xvM340Y0TWTCiOwyXhZZmxmYx5E1Bxs4wH7iYgfskjXZrE41FjTurXum31Lc1YGA=
