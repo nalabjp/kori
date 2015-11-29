@@ -2,8 +2,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/kori.svg)](https://badge.fury.io/rb/kori)
 [![Build Status](https://travis-ci.org/nalabjp/kori.svg?branch=master)](https://travis-ci.org/nalabjp/kori)
+[![Code Climate](https://codeclimate.com/github/nalabjp/kori/badges/gpa.svg)](https://codeclimate.com/github/nalabjp/kori)
 [![Test Coverage](https://codeclimate.com/github/nalabjp/kori/badges/coverage.svg)](https://codeclimate.com/github/nalabjp/kori/coverage)
-[![Issue Count](https://codeclimate.com/github/nalabjp/kori/badges/issue_count.svg)](https://codeclimate.com/github/nalabjp/kori)
 [![Dependency Status](https://gemnasium.com/nalabjp/kori.svg)](https://gemnasium.com/nalabjp/kori)
 
 Kori generate deep frozen objects from yaml or hash.
