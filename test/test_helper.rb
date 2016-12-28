@@ -1,6 +1,12 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+
+if ENV['TRAVIS']
+  begin
+    require 'simplecov'
+    SimpleCov.start
+  rescue LoadError
+  end
+end
 
 require 'kori'
 require 'pry'

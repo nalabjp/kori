@@ -7,6 +7,8 @@ rvm:
 cache:
   - bundler
 before_install: gem install bundler
+after_success:
+  - bundle exec codeclimate-test-reporter
 addons:
   code_climate:
     repo_token: 1493b697c37bf12ce8eb899c244454f178bd97f098c7faaba69683c4a303a835
